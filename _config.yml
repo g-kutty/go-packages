@@ -1,0 +1,25 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+
+# Setup
+title:               Golang
+tagline:             'Go Packages'
+description:         'Best practice with Go packages'
+url:                 https://golang.org
+baseurl:             '/go-packages'
+paginate:            20
+resource:            '/lessons'
+
+# About/contact
+author:
+  name:              Georgekutty Joyes
+
+# Github
+
+github:
+  repo:             https://github.com/g-kutty/go-packages
+
+# Custom vars
+version:             1.0.0
