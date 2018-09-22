@@ -8,7 +8,7 @@ Package __strings__ implements simple functions to manipulate UTF-8 encoded stri
 
 &nbsp;
 
-### String Concatenation
+### [String Concatenation](https://play.golang.org/p/JnWlpMsluLO)
 ***
 
 1 ) __Add__ them together
