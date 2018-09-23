@@ -23,7 +23,7 @@ Package __strconv__ implements conversions to and from __string__ representation
 * If base and bitSize is not in their respective range it will return an `error`.
 
     ```go
-        func ParseInt(s string, base, bitSize int) (int64, error)
+    func ParseInt(s string, base, bitSize int) (int64, error)
     ```
 
 &nbsp;
@@ -36,7 +36,7 @@ Package __strconv__ implements conversions to and from __string__ representation
 * __Atoi__ returns the result of __ParseInt(s, 10, 0)__ converted to type `int`.
 
     ```go
-        func Atoi(s string) (int, error)
+    func Atoi(s string) (int, error)
     ```
 &nbsp;
 
@@ -47,10 +47,10 @@ Package __strconv__ implements conversions to and from __string__ representation
 * This test based on go version go version `go1.11 linux/amd64`
 
     ```sh
-        goos: linux
-        goarch: amd64
-        BenchmarkParseInt-4   100000000        34.9 ns/op       0 B/op       0 allocs/op
-        BenchmarkAtoi-4       200000000        19.0 ns/op       0 B/op       0 allocs/op
+    goos: linux
+    goarch: amd64
+    BenchmarkParseInt-4   100000000        34.9 ns/op       0 B/op       0 allocs/op
+    BenchmarkAtoi-4       200000000        19.0 ns/op       0 B/op       0 allocs/op
     ```
 
 &nbsp;
@@ -68,7 +68,7 @@ Package __strconv__ implements conversions to and from __string__ representation
 * The result uses the lower-case letters `a` to `z` for digit values >= 10.
 
     ```go
-        func FormatInt(i int64, base int) string
+    func FormatInt(i int64, base int) string
     ```
 &nbsp;
 
@@ -78,7 +78,7 @@ Package __strconv__ implements conversions to and from __string__ representation
 * __Itoa__ is shorthand for __FormatInt(int64(i), 10)__.
 
     ```go
-        func Itoa(i int) string
+    func Itoa(i int) string
     ```
 &nbsp;
 
@@ -87,8 +87,8 @@ Package __strconv__ implements conversions to and from __string__ representation
 * This test based on go version go version `go1.11 linux/amd64`
 
     ```sh
-        goos: linux
-        goarch: amd64
-        BenchmarkUseFormatInt-4   500000000        10.3 ns/op       0 B/op       0 allocs/op
-        BenchmarkUseItoa-4        300000000        13.5 ns/op       0 B/op       0 allocs/op
+    goos: linux
+    goarch: amd64
+    BenchmarkUseFormatInt-4   500000000        10.3 ns/op       0 B/op       0 allocs/op
+    BenchmarkUseItoa-4        300000000        13.5 ns/op       0 B/op       0 allocs/op
     ```

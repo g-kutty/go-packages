@@ -16,10 +16,10 @@ Package __strings__ implements simple functions to manipulate UTF-8 encoded stri
 * Concatenating set of strings by manually add them to a string.
 
     ```go
-        var ret string
-        for i := 0; i < count; i++ {
-            ret += str
-        }
+    var ret string
+    for i := 0; i < count; i++ {
+        ret += str
+    }
     ```
 
 2 ) __strings.Join__
@@ -27,11 +27,11 @@ Package __strings__ implements simple functions to manipulate UTF-8 encoded stri
 * We can join all strings in the slice together using `strings.Join` method.
 
     ```go
-        var ret []string
-        for i := 0; i < count; i++ {
-            ret = append(ret, str)
-        }
-        res = strings.Join(ret,"")
+    var ret []string
+    for i := 0; i < count; i++ {
+        ret = append(ret, str)
+    }
+    res = strings.Join(ret,"")
     ```
 
 3 ) __bytes.Buffer__
@@ -39,11 +39,11 @@ Package __strings__ implements simple functions to manipulate UTF-8 encoded stri
 * By using `bytes.Buffer` type along with its `WriteString` and `String` method we can easily join strings together.
 
     ```go
-        var buffer bytes.Buffer
-        for i := 0; i < count; i++ {
-            buffer.WriteString(str)
-        }
-        res = buffer.String()
+    var buffer bytes.Buffer
+    for i := 0; i < count; i++ {
+        buffer.WriteString(str)
+    }
+    res = buffer.String()
     ```
 
 4 ) __strings.Builder__
@@ -53,11 +53,11 @@ Package __strings__ implements simple functions to manipulate UTF-8 encoded stri
 * Its avialable from `go 1.10`.
 
     ```go
-        var sb strings.Builder
-        for i := 0; i < count; i++ {
-            sb.WriteString(str)
-        }
-        res = sb.String()
+    var sb strings.Builder
+    for i := 0; i < count; i++ {
+        sb.WriteString(str)
+    }
+    res = sb.String()
     ```
 
 &nbsp;
@@ -78,10 +78,10 @@ Package __strings__ implements simple functions to manipulate UTF-8 encoded stri
 * This test based on go version go version `go1.11 linux/amd64`
 
     ```sh
-        goos: linux
-        goarch: amd64
-        BenchmarkUsePlusSign-4              300  75562500 ns/op    255076616 B/op    1000 allocs/op
-        BenchmarkUseSlice-4              200000     31301 ns/op    18432 B/op       3 allocs/op
-        BenchmarkUseBytesBuffer-4        200000     20065 ns/op    3296 B/op       6 allocs/op
-        BenchmarkUseStringsBuilder-4     500000      9389 ns/op    2040 B/op       8 allocs/op
+    goos: linux
+    goarch: amd64
+    BenchmarkUsePlusSign-4              300  75562500 ns/op    255076616 B/op    1000 allocs/op
+    BenchmarkUseSlice-4              200000     31301 ns/op    18432 B/op       3 allocs/op
+    BenchmarkUseBytesBuffer-4        200000     20065 ns/op    3296 B/op       6 allocs/op
+    BenchmarkUseStringsBuilder-4     500000      9389 ns/op    2040 B/op       8 allocs/op
     ```
